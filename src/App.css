@@ -1,7 +1,21 @@
 .App {
   text-align: center;
 }
+.bg-color{
+  background-color: #1a1a1a;
+}
+.primary-color{
+  background-color:#282828;
+}
+.secondary-color{
+  background-color:#4a4a4a;
+}
 
+.primaryButtonColor{
+  background-color:#3e3e3e;
+  color:orange;
+  cursor:pointer;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
