@@ -8,7 +8,7 @@ const Router = () => {
   return (
     <>
       <BrowserRouter>
-        <div className="bg-color text-white">
+        <div className="bg-color text-black">
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
