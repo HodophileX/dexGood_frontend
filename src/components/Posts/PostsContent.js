@@ -1,4 +1,5 @@
 import React from 'react';
+import { TbEdit } from 'react-icons/tb';
 
 const PostsContent = () => {
   // const [onModal, setOnModal] = useState(false);
@@ -7,27 +8,28 @@ const PostsContent = () => {
   // }
 
   return (
-    <div className="w-full primary-color">
-      <div className="rounded-sm shadow-sm shadow-black">
-        <div className="border-l-[1px] border-black mx-10 px-2">
+    <div className="w-full backdrop-blur-sm bg-white/30  shadow-2xl shadow-[#414f5cac] rounded-lg">
+      <div className="">
+        <div className=" mx-10 px-2">
           <div className=" relative w-full flex items-center py-2">
-            <div className="w-12 h-10 rounded-sm  bg-slate-700 shadow-sm shadow-slate-900 "></div>
-            <div className="flex w-full py-2">
+            <div className="w-16 h-14 rounded-full  bg-slate-700 shadow-sm shadow-slate-900 "></div>
+            <div className="flex w-full py-2 justify-between">
               <div className="ml-3">
-                <div className="flex h6-thin h6-sm-thin text-orange-600">
+                <div className="flex h6-thin h6-sm-thin text-orange-600 font-bold">
                   username
                 </div>
-                <div className="caption flex text-start">
+                <div className="body-2 flex text-start text-[#00000067]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Corporis exercitationem deserunt voluptates?
                 </div>
               </div>
-              <div className="caption ml-10 flex justify-end items-center cursor-pointer">
-                <div className="p-2 hover:text-orange-600"> edit</div>
+              <div className="body-1">
+                <div className="p-3 rounded-full  hover:bg-[#A1A1E1] cursor-pointer">
+                  <TbEdit className="w-5 h-5" />
+                </div>
               </div>
             </div>
           </div>
-          <div className="mx-8 px-2 ">
+          <div className=" py-3 ">
             <div className="p-2 h6-thin flex ">
               <div className="h6-thin flex justify-start text-start py-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
