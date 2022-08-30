@@ -25,7 +25,7 @@ const Main = () => {
           <div className=" flex flex-col items-center">
             {[...Array(3)].map((a, index) => {
               return (
-                <div className="w-[45vw] mb-6 " key={index}>
+                <div className="w-[45vw] mb-10 " key={index}>
                   <div className="absolute h-36 w-1 left-10 top-20 "></div>
                   <PostsContent />
                 </div>
