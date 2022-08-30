@@ -3,9 +3,9 @@ import HeaderImage from './bg-header.jpg';
 import ClickIcon from './clickIcon.png';
 import DogFeeling from './dogFeeding.png';
 import Globe from './globe.png';
-// import Invite from './Invite.gif';
 import Showcase from './showcase.png';
 import Invite2 from './Invite2.png';
+
 const HowItWorks = () => {
   return (
     <section className="sm:mx-0 md:my-8 md:mx-80 sm:px-2 h-full ">
@@ -13,7 +13,6 @@ const HowItWorks = () => {
         <div className="h2-thin h2-sm-thin font-bold mb-10  text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
           How it works?
         </div>
-
         <div className="w-full flex justify-center items-end ">
           <div className="text-justify md:w-90 sm:w-auto">
             <div className="text-justify my-4 px-4 flex justify-start items-center flex-row relative md:w-[65vw] p-2">
@@ -44,7 +43,7 @@ const HowItWorks = () => {
                 </div>
                 <img
                   src={DogFeeling}
-                  className="md:absolute top-0 scale-75 right-0 rounded-lg"
+                  className="md:absolute top-0 scale-75 right-0 rounded-lg -z-10 md:opacity-60 xl:opacity-100"
                 />
               </div>
             </div>
@@ -65,7 +64,10 @@ const HowItWorks = () => {
                     or the world.
                   </div>
                 </div>
-                <img src={Globe} className="md:absolute -top-10 right-0 " />
+                <img
+                  src={Globe}
+                  className="md:absolute -top-10 right-0 -z-10 md:opacity-60 xl:opacity-100"
+                />
               </div>
             </div>
             <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2">
@@ -84,7 +86,7 @@ const HowItWorks = () => {
                 </div>
                 <img
                   src={Invite2}
-                  className="md:absolute -bottom-10 -right-20 scale-85"
+                  className="md:absolute -bottom-10 -right-20 scale-85 -z-10 md:opacity-60 xl:opacity-100"
                 />
               </div>
             </div>
@@ -105,7 +107,7 @@ const HowItWorks = () => {
                 </div>
                 <img
                   src={Showcase}
-                  className="md:absolute -bottom-30 right-0 scale-75"
+                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 xl:opacity-100"
                 />
               </div>
             </div>
