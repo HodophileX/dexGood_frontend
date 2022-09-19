@@ -1,6 +1,41 @@
-.App {
+* {
   text-align: center;
+  transition:0.2s all;
+ 
 }
+
+
+.f-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    z-index: 10;
+}
+
+.post-modal {
+    position: absolute;
+  
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    outline: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    border-color: none;
+    padding: 2rem;
+    color: white;
+    transition:0.5s all;
+}
+
+
 .bg-color{
   background-color: #a1a1e1;
 }
@@ -54,4 +89,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: transparant;
+    -webkit-border-radius: 10px;
+    padding:2px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d; 
 }
