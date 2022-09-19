@@ -4,6 +4,7 @@ import Navbar from './components/NavBar/Navbar';
 import LandingPage from './Views/LandingPage';
 import LoginContainer from './Views/LoginContainer';
 import Main from './Views/Main';
+import UserContainer from './Views/UserContainer';
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/main" element={<Main />} />
             <Route path="/login" element={<LoginContainer />} />
+            <Route path="/user" element={<UserContainer />} />
           </Routes>
         </div>
       </BrowserRouter>

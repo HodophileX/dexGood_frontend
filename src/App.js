@@ -12,9 +12,8 @@ function App() {
   return (
     <ApolloProvider client={apolloClient}>
       <Provider store={store}>
-        <div className="App">
-          <Router />
-        </div>
+        <Router />
+
         <ToastContainer
           position="top-right"
           autoClose={5000}

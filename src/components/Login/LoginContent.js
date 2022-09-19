@@ -23,6 +23,7 @@ const LoginContent = () => {
       await dispatch(userOtpVerifyAction(data, cb));
     }
   };
+
   const onToggleOtpBox = data => {
     if (data) {
       setMobileInfo(data);

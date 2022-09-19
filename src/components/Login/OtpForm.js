@@ -8,7 +8,6 @@ const OtpForm = ({ onVerifyOtp, mobileInfo }) => {
   const navigate = useNavigate();
 
   const onChangeUserRoute = () => {
-    console.log('called');
     navigate(userRoute());
   };
   const formik = useFormik({

@@ -12,7 +12,6 @@ const MobileForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
     initialValues: { mobile_number: undefined, country_code: '+91' },
     validationSchema: schema,
     onSubmit: val => {
-      console.log(val);
       return onSendOtp(val, onToggleOtpBox);
     },
   });

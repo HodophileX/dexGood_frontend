@@ -24,7 +24,6 @@ import { toastAction } from '../../toastAction';
 import { DUMMY_GQL } from '../../query/dummy';
 
 export const dummyCheck = () => {
-  console.log('called');
   const query = DUMMY_GQL;
   return dispatch => {
     apolloClient
