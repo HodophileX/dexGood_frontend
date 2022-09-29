@@ -64,7 +64,7 @@ const MobileForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
               </div>
               {isOtpSent === 0 && (
                 <div className="mt-10 flex justify-center items-center w-full">
-                  <div className="p-[1px] bg-purple-900 rounded-2xl flex justify-center items-center ">
+                  <div className="p-[1px] bg-purple-900 rounded-full flex justify-center items-center ">
                     <button
                       type="submit"
                       className="bg-slate-600 p-2 rounded-full px-5 h6-thin h6-sm-thin"

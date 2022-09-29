@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar/Navbar';
-import LandingPage from './Views/LandingPage';
-import LoginContainer from './Views/LoginContainer';
-import Main from './Views/Main';
-import UserContainer from './Views/UserContainer';
+import LandingPage from './Views/LandingPage/LandingPage';
+import LoginContainer from './Views/Login/LoginContainer';
+import Main from './Views/Main/Main';
+import UserContainer from './Views/User/UserContainer';
 
 const Router = () => {
   return (

@@ -12,3 +12,16 @@ export const CREATE_POST_GQL = gql`
     }
   }
 `;
+
+export const GET_POST_GQL = gql`
+  query GetAllPost {
+    getAllPost {
+      _id
+      context
+      user_id
+      verification {
+        verifier_id
+      }
+    }
+  }
+`;

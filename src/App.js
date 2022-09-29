@@ -13,7 +13,6 @@ function App() {
     <ApolloProvider client={apolloClient}>
       <Provider store={store}>
         <Router />
-
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -24,7 +23,7 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="dark"
+          theme="light"
         />
       </Provider>
     </ApolloProvider>

@@ -13,7 +13,7 @@ const IntroSection = () => {
           <img
             src={HeaderImage}
             alt="background image"
-            className="absolute bg-black object-fill w-[40%] h-[40%] blur-3xl"
+            className="absolute  object-fill w-[40%] h-[40%] blur-3xl"
           />
         </div>
       </div>
