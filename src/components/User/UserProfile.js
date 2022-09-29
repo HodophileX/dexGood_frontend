@@ -5,16 +5,16 @@ import UserFields from './UserFields';
 
 const UserProfile = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <div className="border-b-[1px] border-black">
         <UserFields />
       </div>
-      <div className="flex justify-center mx-2 md:mx-80">
-        <div className="w-full hidden md:flex">
-          <Details />
-        </div>
-        <div className="w-[100vw] mt-2 flex p-2 ">
-          <div>
+      <div className="mx-40">
+        <div className="w-full flex items-start">
+          <div className="w-[30vw] hidden md:flex justify-center">
+            <Details />
+          </div>
+          <div className="w-[60vw] px-20 mt-2 ">
             <PostsContent />
             <PostsContent />
             <PostsContent />

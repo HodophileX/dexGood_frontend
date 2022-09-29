@@ -4,10 +4,10 @@ const Navbar = () => {
   return (
     <div className="w-100 primary-color py-1 shadow-sm shadow-black text-gray-400 ">
       <div className="w-full flex items-center justify-center text-white">
-        <div>
-          <div className="h5-thin cursor-pointer font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
+        <div className="">
+          <div className="h5-thin cursor-pointer font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-600 to-pink-600">
             <Link to={'main'} className="cursor-pointer">
-              Dex<span className="caption">Repo</span>
+              Plexus <span className="body-2">foundation</span>
             </Link>
           </div>
         </div>
