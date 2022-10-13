@@ -91,7 +91,7 @@ const Navbar = () => {
         </div>
         <div className="w-full h-14 flex md:hidden justify-end ">
           <div className="w-full  h7-thin hover:text-white cursor-pointer flex justify-end h-full items-center">
-            <div className="  h-full ">
+            <div className="h-full ">
               <Link
                 to={'vision'}
                 className="cursor-pointer h-full flex text-center justify-center items-center  px-6"
@@ -104,14 +104,17 @@ const Navbar = () => {
                 <BagIconSvg />
               </div>
             ) : (
-              <div className="w-full h-full ">
+              <div className="w-full h-full">
                 <div className="w-full cursor-pointer h-full flex text-center justify-center items-center">
                   <div
-                    className="w-8 h-8 bg-black mx-1 rounded-full topArrowMobile "
+                    className="w-8 h-8 bg-black mx-1 rounded-full  flex justify-center items-center"
                     onClick={() => setSettingPanelOpen(!settingPanelOpen)}
-                  ></div>
+                  >
+                    {' '}
+                    <BagIconSvg />
+                  </div>
                   <div
-                    className={`absolute w-[90%] h-[50vh] md:w-60 bg-black top-16 left-0  md:left-0 z-10 mx-6 rounded-lg ${
+                    className={`absolute w-[90%] h-[50vh] md:w-60 bg-black top-16 left-0  md:left-0 z-10 mx-6 rounded-lg topArrowMobile ${
                       !settingPanelOpen && 'hidden'
                     } `}
                   >

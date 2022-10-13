@@ -27,7 +27,7 @@ const PCImageModal = ({ isModalOpen, setIsModalOpen }) => {
         <div className="w-full flex justify-start flex-col  items-start">
           <textarea
             className="flex items-start text-start px-2 py-1 w-full min-h-40 h-60 border-2 outline-none h6-thin resize-none"
-            placeholder="What you did?&#x270E; "
+            placeholder="What you do?&#x270E; "
             draggable={false}
             aria-setsize={false}
             onGotPointerCapture={false}
