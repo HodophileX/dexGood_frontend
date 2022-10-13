@@ -10,7 +10,7 @@ import { getMainDefinition } from '@apollo/client/utilities';
 import { createClient } from 'graphql-ws';
 
 const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_BASE_URl || 'http://localhost:5000/graphql',
+  uri: process.env.REACT_APP_BASE_URL || 'http://localhost:5000/graphql',
 });
 
 const wsLink = new GraphQLWsLink(

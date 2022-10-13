@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import MobileForm from './MobileForm';
 import { useDispatch } from 'react-redux';
 import {
-  userOtpVerifyAction,
-  userSendOtpAction,
+  userEmailLoginAction,
+  userEmailOtpVerifyAction,
+  userEmailSendOtpAction,
 } from '../../_redux/action/user';
 import OtpForm from './OtpForm';
+import EmailForm from './EmailForm';
+import PasswordCreate from './PasswordCreate';
+import PasswordForm from './PasswordForm';
 
 const LoginContent = () => {
   const dispatch = useDispatch();
@@ -14,38 +17,61 @@ const LoginContent = () => {
 
   const onSendOtp = async (data, cb) => {
     if (data) {
-      await dispatch(userSendOtpAction(data, cb));
+      await dispatch(userEmailSendOtpAction(data, cb));
+      onToggleOtpBox(data);
     }
   };
 
   const onVerifyOtp = async (data, cb) => {
     if (data) {
-      await dispatch(userOtpVerifyAction(data, cb));
+      await dispatch(userEmailOtpVerifyAction(data, cb));
     }
   };
 
-  const onToggleOtpBox = data => {
+  const passwordGeneration = async (data, cb) => {
+    if (data) {
+      await dispatch(userEmailLoginAction(data, cb));
+    }
+  };
+  const onToggleOtpBox = (data, index) => {
     if (data) {
       setMobileInfo(data);
-      setIsOtpSent(isOtpSent + 1);
+      setIsOtpSent(index);
     }
   };
 
   return (
-    <section className="h-[95vh] flex flex-col">
-      <MobileForm
+    <div className="flex flex-col h-[92vh]">
+      <EmailForm
         onToggleOtpBox={onToggleOtpBox}
         onSendOtp={onSendOtp}
         isOtpSent={isOtpSent}
       />
-      {isOtpSent !== 0 && (
+      {isOtpSent === 1 && (
         <OtpForm
           onToggleModal={onToggleOtpBox}
           mobileInfo={mobileInfo}
           onVerifyOtp={onVerifyOtp}
+          setIsOtpSent={setIsOtpSent}
         />
       )}
-    </section>
+      {isOtpSent === 2 && (
+        <PasswordCreate
+          passwordGeneration={passwordGeneration}
+          mobileInfo={mobileInfo}
+          onVerifyOtp={onVerifyOtp}
+          setIsOtpSent={setIsOtpSent}
+        />
+      )}
+      {isOtpSent === 3 && (
+        <PasswordForm
+          passwordGeneration={passwordGeneration}
+          mobileInfo={mobileInfo}
+          onVerifyOtp={onVerifyOtp}
+          setIsOtpSent={setIsOtpSent}
+        />
+      )}
+    </div>
   );
 };
 
