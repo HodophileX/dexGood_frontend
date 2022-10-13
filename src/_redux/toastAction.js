@@ -7,8 +7,8 @@ export const toastAction = {
     }
   },
   error: error => {
-    if (error?.networkError?.result?.errors[0]?.message) {
-      toast.error(error.networkError.result.errors[0].message);
+    if (error) {
+      toast.error(error);
     } else {
       toast.error('server error', { autoClose: 2000 });
     }

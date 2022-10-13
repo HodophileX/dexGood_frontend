@@ -1,14 +1,20 @@
 import React from 'react';
 import Features from './Features';
-import HowItWorks from './HowItWorks';
+import HowItWorksDesktop from './HowItWorks/HowItWorksDesktop';
+import HowItWorksMobile from './HowItWorks/HowItWorksMobile';
 import IntroSection from './IntroSection';
 
 const LandingContent = () => {
   return (
-    <div className="bg-color">
+    <div className="h-min-screen">
       <IntroSection />
       <Features />
-      <HowItWorks />
+      <div className="hidden md:flex w-full justify-center">
+        <HowItWorksDesktop />
+      </div>
+      <div className="flex md:hidden">
+        <HowItWorksMobile />
+      </div>
     </div>
   );
 };

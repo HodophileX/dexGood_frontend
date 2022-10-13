@@ -1,15 +1,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-import { userRoute } from '../../route';
 
-const OtpForm = ({ onVerifyOtp, mobileInfo }) => {
-  const navigate = useNavigate();
-
-  const onChangeUserRoute = () => {
-    navigate(userRoute());
-  };
+const OtpForm = ({ onVerifyOtp, mobileInfo, setIsOtpSent }) => {
   const formik = useFormik({
     initialValues: {
       otp1: undefined,
@@ -20,7 +13,7 @@ const OtpForm = ({ onVerifyOtp, mobileInfo }) => {
       otp6: undefined,
     },
     onSubmit: val => {
-      let otp =
+      let email_otp =
         val.otp1 +
         '' +
         val.otp2 +
@@ -33,15 +26,15 @@ const OtpForm = ({ onVerifyOtp, mobileInfo }) => {
         '' +
         val.otp6;
 
-      otp = parseInt(otp);
+      email_otp = parseInt(email_otp);
+
       if (mobileInfo) {
-        let { mobile_number, country_code } = mobileInfo;
+        let { email } = mobileInfo;
         let body = {
-          otp,
-          mobile_number,
-          country_code,
+          email_otp,
+          email,
         };
-        onVerifyOtp(body, onChangeUserRoute);
+        onVerifyOtp(body, setIsOtpSent(2));
       }
     },
   });
@@ -184,6 +177,7 @@ const OtpForm = ({ onVerifyOtp, mobileInfo }) => {
 OtpForm.propTypes = {
   onVerifyOtp: PropTypes.func,
   mobileInfo: PropTypes.object,
+  setIsOtpSent: PropTypes.func,
 };
 
 export default OtpForm;

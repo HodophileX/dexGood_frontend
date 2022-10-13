@@ -1,27 +1,27 @@
 import React from 'react';
-import HeaderImage from './bg-header.jpg';
-import DogFeeling from './dogFeeding.png';
-import Globe from './globe.png';
-import Showcase from './showcase.png';
-import Invite2 from './Invite2.png';
+import HeaderImage from '../../../Image/landingPage/bg-header.jpg';
+import DogFeeling from '../../../Image/landingPage/dogFeeding.png';
+import Globe from '../../../Image/landingPage/globe.png';
+import Showcase from '../../../Image/landingPage/showcase.png';
+import Invite2 from '../../../Image/landingPage/Invite2.png';
 
-const HowItWorks = () => {
+const HowItWorksDesktop = () => {
   return (
     <section className="sm:mx-0 md:my-8 md:mx-80 sm:px-2 h-full ">
       <div className="h-full w-full flex flex-col justify-center pb-10 items-center">
         <div className="h2-thin h2-sm-thin font-bold mb-10  text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-700 to-pink-600">
           How it works?
         </div>
-        <div className="w-full flex justify-center items-end ">
+        <div className="w-full flex justify-center items-end relative">
           <div className="text-justify md:w-90 sm:w-auto">
             <div className=" my-4 px-4 flex justify-start items-center flex-row relative md:w-[65vw] p-2">
               <img
                 src={HeaderImage}
                 className="absolute h-[50%] blur-2xl right-40"
               />
-              <div className="z-10 flex flex-col md:flex-row justify-start items-center w-full dashboard rounded-md bg-gradient-to-r from-indigo-500">
+              <div className="z-10 flex flex-col md:flex-row justify-start items-center w-full dashboard rounded-md bg-gradient-to-r from-indigo-500 hover:scale-[102%] ease-in transition-300">
                 <div className="relative">
-                  <h1 className="lg:text-[20rem] text-[13rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-700 to-pink-600">
+                  <h1 className="lg:text-[20rem] text-[13rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b to-purple-700 from-pink-600 border-b-2 border-black">
                     1
                   </h1>
                 </div>
@@ -43,9 +43,9 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="absolute w-[20%] h-80 bg-purple-700 right-0 blur-3xl rounded-full"></div>
-            <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2">
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600 border-b-2 border-black">
                   2
                 </h1>
                 <div className="text-start w-80">
@@ -65,9 +65,9 @@ const HowItWorks = () => {
                 />
               </div>
             </div>
-            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2">
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600 border-b-2 border-black">
                   3
                 </h1>
                 <div className=" w-80 ">
@@ -85,9 +85,9 @@ const HowItWorks = () => {
                 />
               </div>
             </div>
-            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2">
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 border-b-2 border-black">
                   4
                 </h1>
                 <div className="w-60 text-start">
@@ -107,10 +107,11 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
+          <div className="absolute h-full w-2 bg-gradient-to-b from-indigo-500 left-36 -top-20 rounded-full z-2"></div>
         </div>
       </div>
     </section>
   );
 };
 
-export default HowItWorks;
+export default HowItWorksDesktop;

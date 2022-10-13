@@ -1,7 +1,11 @@
 // Landing page Route
 export const userRoute = isParams => {
   if (isParams) {
-    return `/main`;
+    return `/user`;
   }
-  return '/main';
+  return '/user';
+};
+
+export const loginRoute = () => {
+  return '/login';
 };

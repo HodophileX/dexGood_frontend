@@ -10,6 +10,38 @@ export const EditButton = () => (
   </svg>
 );
 
+export const BoxIconSvg = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 36 56"
+    class="as-svgicon as-svgicon-delivery as-svgicon-elevated as-svgicon-deliverydelevated"
+    aria-hidden="true"
+    role="img"
+  >
+    <g>
+      <rect width="36" height="56" fill="none"></rect>
+      <path d="M33.905,17.063l-14-7.581a3.991,3.991,0,0,0-3.811,0l-14,7.581A4,4,0,0,0,0,20.581V35.419a4,4,0,0,0,2.095,3.518l14,7.581a3.989,3.989,0,0,0,3.811,0l14-7.581A4,4,0,0,0,36,35.419V20.581A4,4,0,0,0,33.905,17.063ZM17.048,11.241a1.993,1.993,0,0,1,1.9,0l13.8,7.47-6.383,3.645L11.943,14.005ZM18,27.133,3.253,18.711l6.629-3.589L24.355,23.5ZM3.048,37.178A2,2,0,0,1,2,35.419V20.581a1.955,1.955,0,0,1,.036-.262L17,28.865V44.733ZM34,35.419a2,2,0,0,1-1.048,1.759L19,44.733V28.865l14.964-8.545a1.955,1.955,0,0,1,.036.262Z"></path>
+    </g>
+  </svg>
+);
+export const BagIconSvg = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="60"
+    viewBox="0 0 13 44"
+    width="13"
+    className="icon"
+  >
+    <g fill="none" fill-rule="evenodd">
+      <path d="m0 44h13v-44h-13z" />
+      <path
+        d="m12 25.9c0 .6-.5 1.1-1.1 1.1h-8.8c-.6 0-1.1-.5-1.1-1.1v-7.9c0-.5.5-1 1.1-1h8.9c.6 0 1.1.5 1.1 1.1v7.8zm-5.5-11.9c1.2 0 2.1.9 2.3 2h-4.6c.2-1.1 1.1-2 2.3-2zm4.4 2h-1.1c-.2-1.7-1.6-3-3.3-3s-3.1 1.3-3.3 3h-1.1c-1.2 0-2.1.9-2.1 2.1v7.9c0 1.1.9 2 2.1 2h8.9c1.1 0 2.1-.9 2.1-2.1v-7.9c-.1-1.1-1-2-2.2-2z"
+        fill="#fff"
+      />
+    </g>
+  </svg>
+);
+
 export const AwardIcon = () => (
   <svg
     version="1.1"
@@ -100,7 +132,7 @@ export const EmailIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     aria-label="Verify Your Email"
-    class="sc-cviRkQ bkSOYW"
+    className="sc-cviRkQ bkSOYW"
   >
     <g fill="none" fill-rule="evenodd">
       <path
@@ -135,7 +167,7 @@ export const CollabrationIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     aria-label="Start Collaborating"
-    class="sc-cviRkQ bkSOYW"
+    className="sc-cviRkQ bkSOYW"
   >
     <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd">
       <path d="M32.5 23c3.206 0 6.115 1.018 8.218 2.683C42.727 27.274 44 29.463 44 31.9c0 .341-.221.616-.518.87-.518.442-1.288.802-2.217 1.106C38.96 34.631 35.729 35 32.5 35c-3.229 0-6.46-.369-8.765-1.125-.929-.304-1.699-.664-2.217-1.107-.297-.253-.518-.528-.518-.869 0-2.436 1.273-4.625 3.282-6.216C26.385 24.018 29.294 23 32.5 23h0zm0-16a5.49 5.49 0 013.89 1.61A5.483 5.483 0 0138 12.5a5.483 5.483 0 01-1.61 3.89A5.483 5.483 0 0132.5 18a5.483 5.483 0 01-3.89-1.61A5.483 5.483 0 0127 12.5a5.49 5.49 0 011.61-3.89A5.483 5.483 0 0132.5 7z"></path>
@@ -152,7 +184,7 @@ export const SaveFileIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     aria-label="Save a Document to the Workspace"
-    class="sc-cviRkQ bkSOYW"
+    className="sc-cviRkQ bkSOYW"
   >
     <g fill="none" fill-rule="evenodd">
       <path d="M24 8v9a3 3 0 003 3h9L24 8z" fill="#BBD975"></path>
@@ -185,7 +217,7 @@ export const SearchIcon = () => (
     data-testid="loupe-icon"
     role="img"
     aria-label="Search"
-    class="sc-dPiKHq eqJjHU"
+    className="sc-dPiKHq eqJjHU"
   >
     <defs>
       <clipPath id="magnifying-glass-24_svg__a">
@@ -211,7 +243,7 @@ export const SettingIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-kjOQmg kBDmdY"
+    className="sc-kjOQmg kBDmdY"
   >
     <g fill="currentColor" fill-rule="evenodd">
       <path
@@ -230,7 +262,7 @@ export const DiscoverIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-eqUhTQ izZEwu sc-kjOQmg kBDmdY"
+    className="sc-eqUhTQ izZEwu sc-kjOQmg kBDmdY"
   >
     <g fill="none" fill-rule="evenodd">
       <path
@@ -250,7 +282,7 @@ export const AddIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-kjOQmg kBDmdY"
+    className="sc-kjOQmg kBDmdY"
     role="image"
   >
     <g
@@ -274,7 +306,7 @@ export const PersonIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-jasiVX bWKGhh"
+    className="sc-jasiVX bWKGhh"
   >
     <g fill="currentColor">
       <path
@@ -290,7 +322,7 @@ export const MultipleFileIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-kjOQmg kBDmdY"
+    className="sc-kjOQmg kBDmdY"
   >
     <g fill="currentColor" fill-rule="evenodd">
       <path
@@ -348,7 +380,7 @@ export const ArrowIcon = () => (
     viewBox="0 0 16 16"
     width="24"
     height="24"
-    class="sc-bdLNTu caSWHv"
+    className="sc-bdLNTu caSWHv"
   >
     <g fill="none" fill-rule="evenodd">
       <path
@@ -372,7 +404,7 @@ export const TwitterIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 18 16"
-    class="sc-cyZYgm bXNPFJ"
+    className="sc-cyZYgm bXNPFJ"
   >
     <path
       d="M17.965 2.515a7.594 7.594 0 01-2.119.572 3.67 3.67 0 001.622-2.01 7.697 7.697 0 01-2.345.874A3.702 3.702 0 0012.43.8c-2.038 0-3.69 1.626-3.69 3.63 0 .288.034.564.095.83A10.507 10.507 0 011.23 1.474c-.32.533-.5 1.153-.5 1.827 0 1.263.653 2.372 1.641 3.024a3.723 3.723 0 01-1.67-.455v.045c0 1.761 1.27 3.23 2.959 3.564A3.803 3.803 0 012 9.542a3.696 3.696 0 003.454 2.523 7.476 7.476 0 01-4.577 1.554c-.292 0-.584-.017-.877-.05A10.618 10.618 0 005.668 15.2c6.79 0 10.498-5.534 10.498-10.324 0-.155 0-.31-.01-.465A7.388 7.388 0 0018 2.53l-.035-.015z"
@@ -386,7 +418,7 @@ export const InstagramIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 18 18"
-    class="sc-koURUA etSWNV"
+    className="sc-koURUA etSWNV"
   >
     <path
       d="M9 0C6.555 0 6.25.011 5.29.054 4.33.099 3.679.25 3.105.472A4.407 4.407 0 001.51 1.51c-.5.5-.809 1.003-1.038 1.595C.25 3.679.098 4.331.054 5.29.009 6.25 0 6.555 0 9c0 2.445.011 2.75.054 3.71.045.958.196 1.611.418 2.185.23.591.538 1.094 1.038 1.595.5.499 1.003.809 1.595 1.038.575.222 1.227.374 2.185.418.96.045 1.265.054 3.71.054 2.445 0 2.75-.011 3.71-.054.958-.045 1.611-.197 2.185-.419a4.424 4.424 0 001.595-1.038c.499-.5.809-1 1.038-1.594.222-.574.374-1.227.418-2.185.045-.96.054-1.265.054-3.71 0-2.445-.011-2.75-.054-3.71-.045-.958-.197-1.612-.419-2.185A4.417 4.417 0 0016.49 1.51c-.5-.5-1-.809-1.594-1.038C14.321.25 13.668.098 12.71.054 11.75.009 11.445 0 9 0zm3.637 1.673c.878.041 1.354.187 1.67.311.422.163.72.358 1.037.672.315.315.51.615.672 1.036.123.317.27.793.31 1.67.043.95.052 1.235.052 3.638 0 2.403-.01 2.689-.055 3.637-.046.878-.192 1.354-.316 1.67-.168.422-.359.72-.674 1.037-.314.315-.618.51-1.035.672-.315.123-.799.27-1.676.31-.956.043-1.237.052-3.645.052s-2.689-.01-3.644-.055c-.878-.046-1.362-.192-1.677-.316a2.787 2.787 0 01-1.034-.674 2.733 2.733 0 01-.675-1.035c-.124-.315-.27-.799-.315-1.676-.034-.945-.046-1.237-.046-3.633 0-2.397.012-2.69.046-3.646.046-.878.191-1.36.315-1.675.157-.428.36-.72.675-1.036a2.662 2.662 0 011.034-.674c.315-.124.788-.27 1.666-.315.956-.034 1.237-.046 3.644-.046L9 1.62c2.402 0 2.689.012 3.637.053zM9 4.378a4.621 4.621 0 100 9.243 4.621 4.621 0 000-9.243zM9 12a3 3 0 110-6 3 3 0 110 6zm5.884-7.804a1.08 1.08 0 01-2.16 0 1.08 1.08 0 012.16 0z"
@@ -399,7 +431,7 @@ export const DropDownIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
-    class="sc-eWfWgB sc-iseJRi jwdikc bwPGmM"
+    className="sc-eWfWgB sc-iseJRi jwdikc bwPGmM"
     height="16px"
   >
     <path

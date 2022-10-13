@@ -3,6 +3,13 @@
   transition:0.2s all;
  
 }
+img {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
 
 .bottomArrow::after{
     content: "";
@@ -13,6 +20,29 @@
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
+}
+
+.topArrow::after{
+    content: "";
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  transform: rotate(180deg);
+  margin-left: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+.topArrowMobile::after{
+    content: "";
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  transform: rotate(180deg);
+  margin-left: -30px;
+  border-width: 30px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
 }
 .f-modal-overlay {
     position: fixed;
@@ -27,6 +57,9 @@
     z-index: 10;
 }
 
+.icon:hover{
+ fill: #DA4567;
+}
 .post-modal {
     position: absolute;
   
@@ -46,7 +79,7 @@
 
 
 .bg-color{
-  background-color: #a1a1e1;
+  background-color: #a1a1e189;
 }
 
 .dashboard {
