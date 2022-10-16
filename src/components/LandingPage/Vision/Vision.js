@@ -3,13 +3,13 @@ import Victor from '../../../Image/design/viktor.jpg';
 const Vision = () => {
   return (
     <div className="bg-black flex  items-center flex-col">
-      <div className="flex h-[30vh] md:h-[40vh] w-full mx-2 md:w-[70%] justify-center items-center primary-color text-white  rounded-b-[100%]">
+      <div className="flex h-[30vh] md:h-[40vh] w-full mx-2 md:w-[70%] justify-center items-center primary-color text-white rounded-b-[100%]">
         <div className="mt-2 h-full h2-thin h3-sm-thin  text-[#c6e1e6] flex justify-center items-center font-extrabold ">
           Our Vision
         </div>
       </div>
-      <div className="h-auto flex justify-center items-center mt-16  text-[#c6e1e6] ">
-        <div className="h4-thin h5-sm-thin  md:w-[70%] md:text-justify text-white   px-4 py-10  z-1  text-justify ">
+      <div className="h-auto flex justify-center items-center mt-16 text-[#c6e1e6]">
+        <div className="h4-thin h5-sm-thin md:w-[70%] md:text-justify text-white px-4 py-10  z-1 text-justify ">
           We hope for a future where one day not a single problem of any
           sentient being in this universe will go unaddressed, where people will
           go off their limits to help anyone in need, where reality would cease
