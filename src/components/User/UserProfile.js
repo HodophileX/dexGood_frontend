@@ -14,12 +14,12 @@ const UserProfile = ({ user }) => {
       <div className="border-b-[1px] border-black">
         <UserFields />
       </div>
-      <div className="mx-40">
-        <div className="w-full flex items-start">
-          <div className="w-[30vw] hidden md:flex justify-center">
+      <div className="mx-2 md:mx-40">
+        <div className="w-full flex md:flex-row flex-col items-start">
+          <div className="w-full md:w-[30vw]  justify-center ">
             <Details user={user} />
           </div>
-          <div className="w-[60vw] px-20 mt-2 ">
+          <div className="mw-full md:w-[60vw] px-2 md:px-20 mt-2 ">
             {posts ? (
               posts.map((post, index) => {
                 return <Post post={post} key={index} />;
@@ -34,7 +34,16 @@ const UserProfile = ({ user }) => {
                 </div>
               </>
             )}
-            <div className="mt-10">Active on platform</div>
+            <div className="mt-10 mx-2">
+              {posts && (
+                <div className=" w-full h-40 bg-black text-white rounded-md">
+                  <div className="pt-4 h6-thin mx-6 text-start">
+                    Putting your social links will help people and recruiter to
+                    react out to you
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

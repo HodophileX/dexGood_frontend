@@ -18,7 +18,7 @@ const PostCreate = () => {
   return (
     <div className="w-full bg-white text-black py-4 rounded-md shadow-lg">
       <div className="w-full ">
-        <div className="mx-4 px-2">
+        <div className="mx-2 md:mx-4 px-2">
           <div className="relative w-full flex items-center ">
             <div className="w-10 h-10 rounded-full  bg-[#eef0f2] shadow-sm shadow-slate-900 ">
               <img src={ProfileImage} />
@@ -30,7 +30,7 @@ const PostCreate = () => {
                     <input
                       className="w-full text-start rounded-sm text-black px-2 py-2 caption border-[1px] border-black placeholder-[#888]"
                       placeholder="write your today's deed"
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => openModal('Empty')}
                     />
                   </div>
                 </div>
@@ -40,7 +40,7 @@ const PostCreate = () => {
           <div className="py-2 ">
             <div className="flex justify-evenly">
               {buttonsTitle.map((button, index) => (
-                <div className="mx-[1px]">
+                <div className="">
                   <DefaultButton
                     title={button.title}
                     key={index}

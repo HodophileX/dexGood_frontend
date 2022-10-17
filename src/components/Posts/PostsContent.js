@@ -10,10 +10,10 @@ const PostsContent = () => {
       <div className=" mx-2 md:mx-10">
         <div className="w-full flex justify-center">
           {posts && posts.length === 0 && (
-            <div className="p-[1px] w-full md:w-[65%] mx-2  mb-2 h-48 rounded-md bg-gradient-to-b from-[#010125] via-[#231148] to-[#733b75] hover:scale-[101%] ease-in duration-400">
+            <div className="p-[1px] w-full md:w-[65%]   mb-2 h-48 rounded-md bg-gradient-to-b from-[#010125] via-[#231148] to-[#733b75] hover:scale-[101%] ease-in duration-400">
               <div className="rounded-md p-2">
-                <div className="h3-thin text-[#666699] text-white text-start h-full font-bold">
-                  <span className="h2-thin h2-sm-thin text-white">Record.</span>{' '}
+                <div className="h4-thin h5-sm-thin text-[#666699] text-start h-full font-bold">
+                  <span className="h3-thin h4-sm-thin text-white">Record.</span>{' '}
                   Encourage the world around you by your deed
                 </div>
               </div>

@@ -9,9 +9,6 @@ const UserFields = () => {
           Repository
         </div>
       </div>
-      <div className="flex md:hidden  px-4 border-b-[3px]  py-2 cursor-pointer mx-2 ml-auto text-center justify-center items-center">
-        <div>User</div>
-      </div>
     </div>
   );
 };

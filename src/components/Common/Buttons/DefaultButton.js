@@ -8,7 +8,7 @@ export const DefaultButton = ({ title, backgroundColor, action }) => {
       <div
         className={`w-full rounded-sm body-2 text-center ${
           backgroundColor ? backgroundColor : 'bg-black'
-        } px-2 py-2  text-black body-2 border-[#000000] border-[1px]`}
+        } px-2 py-2  text-white body-2 border-[#000000] border-[1px]`}
       >
         {title}
       </div>

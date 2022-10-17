@@ -30,7 +30,6 @@ const PCImageModal = ({ isModalOpen, setIsModalOpen }) => {
             placeholder="What you do?&#x270E; "
             draggable={false}
             aria-setsize={false}
-            onGotPointerCapture={false}
           ></textarea>
 
           <div className="w-full">

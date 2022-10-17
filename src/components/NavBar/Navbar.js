@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginRoute } from '../../route';
@@ -7,6 +7,7 @@ import { BagIconSvg, EditButton } from '../Common/svg/icon';
 
 const Navbar = () => {
   const user = useSelector(state => state.user.user);
+
   const [settingPanelOpen, setSettingPanelOpen] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -15,6 +16,10 @@ const Navbar = () => {
     setSettingPanelOpen(false);
     navigate(loginRoute());
   };
+
+  useEffect(() => {
+    setSettingPanelOpen(false);
+  }, [window.location.href]);
 
   return (
     <div className="w-100 primary-color  h-14 shadow-sm shadow-black flex items-center justify-center relative z-100">
@@ -28,14 +33,16 @@ const Navbar = () => {
         </div>
         <div className="w-full h-14 hidden md:flex">
           <div className="w-full px-2 h7-thin  cursor-pointer flex justify-end h-full text-[#a3a3a3]">
-            <div className=" h-full hover:text-white flex text-center justify-center items-center">
-              <Link
-                to={'main'}
-                className="cursor-pointer h-full flex text-center justify-center items-center   px-6"
-              >
-                main
-              </Link>
-            </div>
+            {user && (
+              <div className=" h-full hover:text-white flex text-center justify-center items-center">
+                <Link
+                  to={'main'}
+                  className="cursor-pointer h-full flex text-center justify-center items-center   px-6"
+                >
+                  Post 
+                </Link>
+              </div>
+            )}
             <div className="hover:text-white  h-full ">
               <Link
                 to={'vision'}
@@ -63,7 +70,7 @@ const Navbar = () => {
                     <BagIconSvg />
                   </div>
                   <div
-                    className={`absolute w-60 bg-black top-16 z-10 px-6 pb-2 rounded-md  topArrow ${
+                    className={`absolute w-60 z-20 bg-black top-16 px-6 pb-2 rounded-md  topArrow ${
                       !settingPanelOpen && 'hidden'
                     } `}
                   >
@@ -107,7 +114,7 @@ const Navbar = () => {
               <div className="w-full h-full">
                 <div className="w-full cursor-pointer h-full flex text-center justify-center items-center">
                   <div
-                    className="w-8 h-8 bg-black mx-1 rounded-full  flex justify-center items-center"
+                    className="w-8 h-8 ml-2 bg-black mx-1 rounded-full  flex justify-center items-center"
                     onClick={() => setSettingPanelOpen(!settingPanelOpen)}
                   >
                     {' '}
@@ -119,7 +126,15 @@ const Navbar = () => {
                     } `}
                   >
                     <div
-                      className="w-[100vw] h6-thin h6-sm-thin border-b-[1px] border-white py-2"
+                      className="w-full h-full hover:bg-[#ffffff10] rounded-md py-2 hover:text-white"
+                      onClick={() => setSettingPanelOpen(!settingPanelOpen)}
+                    >
+                      <Link to={'user'}>
+                        {user ? user.username : 'Profile'}
+                      </Link>
+                    </div>
+                    <div
+                      className=" h6-thin h6-sm-thin border-b-[1px] border-white py-2"
                       onClick={logout}
                     >
                       Logout

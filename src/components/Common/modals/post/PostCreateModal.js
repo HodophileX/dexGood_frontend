@@ -31,7 +31,7 @@ const PostCreateModal = ({
       ariaHideApp={false}
       overlayClassName="f-modal-overlay"
       shouldCloseOnOverlayClick={true}
-      className="post-modal w-[90%] px-2 md:w-[35%] md:h-auto"
+      className="post-modal w-[90%] px-1 md:px-2 md:w-[35%] md:h-auto"
     >
       <form onSubmit={formik.handleSubmit}>
         <div className="flex text-black flex-col">
@@ -40,7 +40,7 @@ const PostCreateModal = ({
               Write your deed
             </div>
             <div
-              className="hover:text-slate-700 flex justify-center items-center px-3 py-1 hover:bg-blue-100 rounded-md cursor-pointer"
+              className="hover:text-slate-700 flex justify-center items-center px-1 md:px-3 py-1 hover:bg-blue-100 rounded-md cursor-pointer"
               onClick={() => setIsModalOpen(!isModalOpen)}
             >
               close
@@ -57,7 +57,6 @@ const PostCreateModal = ({
               value={formik.values.context || ''}
               onChange={formik.handleChange}
               aria-setsize={false}
-              onGotPointerCapture={false}
               required
             ></textarea>
             <div className="flex my-2 border-[1px] border-black w-full rounded-sm">

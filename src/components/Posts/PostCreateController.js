@@ -19,19 +19,17 @@ const PostCreateController = ({
   const postCallAction = () => {
     dispatch(getPostAction());
   };
+  console.log(postCreateType);
   return (
     <div>
-      {postCreateType == 'Testimoney' ||
-        (postCreateType == '' && (
-          <div>
-            <PostCreateModal
-              isModalOpen={isModalOpen}
-              setIsModalOpen={setIsModalOpen}
-              createPost={createPost}
-              postCallAction={postCallAction}
-            />
-          </div>
-        ))}
+      {(postCreateType == 'Testimoney' || postCreateType == 'Empty') && (
+        <PostCreateModal
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          createPost={createPost}
+          postCallAction={postCallAction}
+        />
+      )}
       {postCreateType == 'Image' && (
         <div>
           <PCImageModal
@@ -41,20 +39,16 @@ const PostCreateController = ({
         </div>
       )}
       {postCreateType == 'documents' && (
-        <div>
-          <PCTestimoneyModal
-            isModalOpen={isModalOpen}
-            setIsModalOpen={setIsModalOpen}
-          />
-        </div>
+        <PCTestimoneyModal
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
       )}
       {postCreateType == 'declaration' && (
-        <div>
-          <PCTestimoneyModal
-            isModalOpen={isModalOpen}
-            setIsModalOpen={setIsModalOpen}
-          />
-        </div>
+        <PCTestimoneyModal
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
       )}
     </div>
   );
