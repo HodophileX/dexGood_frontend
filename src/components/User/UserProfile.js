@@ -5,10 +5,8 @@ import PropType from 'prop-types';
 import Details from './Details';
 import UserFields from './UserFields';
 import { SubmitButton } from '../Common/Buttons/SubmitButton';
-
 const UserProfile = ({ user }) => {
   const posts = useSelector(state => state.post.post);
-
   return (
     <div className="w-full">
       <div className="border-b-[1px] border-black">

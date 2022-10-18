@@ -1,6 +1,6 @@
 export const PROCESS = [
   {
-    title: ' Be the change',
+    title: 'Be the change',
     process: `Empathize and do a
                     good deed! Store your past or current deeds in the
                     repository. Fill out the verification form. Avail the
@@ -29,5 +29,9 @@ export const PROCESS = [
                     Dexrepo ID on your resume/CV as a memento of your
                     character, and add
                     on to your value.`,
+  },
+  {
+    title: 'Raise funds',
+    process: `In furtherance of any good deed raise or donate funds`,
   },
 ];

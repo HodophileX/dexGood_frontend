@@ -39,7 +39,7 @@ const Navbar = () => {
                   to={'main'}
                   className="cursor-pointer h-full flex text-center justify-center items-center   px-6"
                 >
-                  Post 
+                  Post
                 </Link>
               </div>
             )}
@@ -121,23 +121,25 @@ const Navbar = () => {
                     <BagIconSvg />
                   </div>
                   <div
-                    className={`absolute w-[90%] h-[50vh] md:w-60 bg-black top-16 left-0  md:left-0 z-10 mx-6 rounded-lg topArrowMobile ${
+                    className={`absolute w-full h-[90vh] md:w-60 dashboard top-16 left-0  md:left-0    ${
                       !settingPanelOpen && 'hidden'
                     } `}
                   >
-                    <div
-                      className="w-full h-full hover:bg-[#ffffff10] rounded-md py-2 hover:text-white"
-                      onClick={() => setSettingPanelOpen(!settingPanelOpen)}
-                    >
-                      <Link to={'user'}>
-                        {user ? user.username : 'Profile'}
-                      </Link>
-                    </div>
-                    <div
-                      className=" h6-thin h6-sm-thin border-b-[1px] border-white py-2"
-                      onClick={logout}
-                    >
-                      Logout
+                    <div className="w-[90%] mx-6 h-auto shadow-lg shadow-black mt-2 md:w-60 primary-color rounded-lg z-10 ">
+                      <div
+                        className="w-full h6-thin h6-sm-thin hover:bg-[#ffffff10] py-2 border-b-[1px] border-white hover:text-white"
+                        onClick={() => setSettingPanelOpen(!settingPanelOpen)}
+                      >
+                        <Link to={'user'}>
+                          {user ? user.username : 'Profile'}
+                        </Link>
+                      </div>
+                      <div
+                        className=" h6-thin h6-sm-thin  py-2"
+                        onClick={logout}
+                      >
+                        Logout
+                      </div>
                     </div>
                   </div>
                 </div>

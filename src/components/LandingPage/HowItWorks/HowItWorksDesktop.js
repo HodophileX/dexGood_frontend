@@ -38,7 +38,7 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={DogFeeling}
-                  className="md:absolute top-0 scale-75 right-0 rounded-lg -z-10 md:opacity-50 xl:opacity-60"
+                  className="md:absolute top-0 scale-75 right-0 rounded-lg -z-10 md:opacity-50 "
                 />
               </div>
             </div>
@@ -61,11 +61,11 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Globe}
-                  className="md:absolute -top-10 right-0 -z-10 md:opacity-60 xl:opacity-60"
+                  className="md:absolute -top-10 right-0 -z-10 md:opacity-60 "
                 />
               </div>
             </div>
-            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
                 <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600 border-b-2 border-black">
                   3
@@ -81,11 +81,11 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Invite2}
-                  className="md:absolute -bottom-10 -right-20 scale-60 -z-10 md:opacity-60 xl:opacity-80"
+                  className="md:absolute -bottom-10 -right-20 scale-75 -z-10 md:opacity-60 xl:opacity-80"
                 />
               </div>
             </div>
-            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
                 <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 border-b-2 border-black">
                   4
@@ -102,12 +102,30 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Showcase}
-                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 xl:opacity-60"
+                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 "
+                />
+              </div>
+            </div>
+            <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
+              <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 border-b-2 border-black">
+                  5
+                </h1>
+                <div className="w-60 text-start">
+                  <h4 className=" font-boldtext-[#FEE6C1] mb-5">Raise funds</h4>
+                  <div className="text-start h6-thin body-sm-1 text-gray-900">
+                    In furtherance if any good deed
+                    <span className="text-orange-600">raise or donate</span>
+                    funds
+                  </div>
+                </div>
+                <img
+                  src={Showcase}
+                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 "
                 />
               </div>
             </div>
           </div>
-          <div className="absolute h-full w-2 bg-gradient-to-b from-indigo-500 left-36 -top-20 rounded-full z-2"></div>
         </div>
       </div>
     </section>
