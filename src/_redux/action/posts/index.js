@@ -4,6 +4,7 @@ import { GET_POST_PENDING, POST_CREATE_PENDING, POST_INFO } from './type';
 import { CREATE_POST_GQL, GET_POST_GQL } from '../../query/post';
 import { apolloClient } from '../../../services/apolloClient';
 import { toastAction } from '../../toastAction';
+import { UPLOAD_IMAGE_GQL } from '../../query/file';
 
 export const createPostAction = (value, cb) => {
   const mutation = CREATE_POST_GQL;

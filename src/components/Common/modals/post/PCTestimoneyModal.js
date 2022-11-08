@@ -1,8 +1,8 @@
 import React from 'react';
 import PropType from 'prop-types';
 import ReactModal from 'react-modal';
-import CrossIcon from '../../../../assets/svg/close.svg';
 import { SubmitButton } from '../../Buttons/SubmitButton';
+import { CloseIcon } from '../../../../assets/svg/close';
 
 const PCTestimoneyModal = ({ isModalOpen, setIsModalOpen }) => {
   return (
@@ -21,7 +21,7 @@ const PCTestimoneyModal = ({ isModalOpen, setIsModalOpen }) => {
             onClick={() => setIsModalOpen(!isModalOpen)}
           >
             close
-            <img className="w-5 ml-auto mt-1 " src={CrossIcon}></img>
+            <CloseIcon />
           </div>
         </div>
         <div className="w-full flex justify-start flex-col  items-start">

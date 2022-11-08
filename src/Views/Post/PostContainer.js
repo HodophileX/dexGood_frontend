@@ -6,7 +6,6 @@ import { getPostAction } from '../../_redux/action/posts';
 
 const MainContainer = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getPostAction());
   }, []);

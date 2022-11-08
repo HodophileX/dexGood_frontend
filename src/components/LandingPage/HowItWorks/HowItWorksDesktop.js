@@ -38,7 +38,7 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={DogFeeling}
-                  className="md:absolute top-0 scale-75 right-0 rounded-lg -z-10 md:opacity-50 "
+                  className="md:absolute top-0 scale-75 right-0 rounded-lg -z-10 "
                 />
               </div>
             </div>
@@ -61,13 +61,13 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Globe}
-                  className="md:absolute -top-10 right-0 -z-10 md:opacity-60 "
+                  className="md:absolute -top-10 right-0 -z-10 "
                 />
               </div>
             </div>
             <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600 border-b-2 border-black">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-pink-600 border-b-2 border-black">
                   3
                 </h1>
                 <div className=" w-80 ">
@@ -81,34 +81,34 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Invite2}
-                  className="md:absolute -bottom-10 -right-20 scale-75 -z-10 md:opacity-60 xl:opacity-80"
+                  className="md:absolute -bottom-10 -right-20 scale-75 -z-10 "
                 />
               </div>
             </div>
             <div className="relative text-justify my-4 px-4 flex justify-start items-center p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 border-b-2 border-black">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-blue-600 border-b-2 border-black">
                   4
                 </h1>
                 <div className="w-60 text-start">
                   <h4 className=" font-boldtext-[#FEE6C1] mb-5">Showcase</h4>
                   <div className="text-start h6-thin body-sm-1 text-gray-900">
                     After going public{' '}
-                    <span className="text-orange-600">display</span> your
-                    Dexrepo ID on your resume/CV as a memento of your{' '}
+                    <span className="text-orange-600">display</span> your plexus
+                    repository ID on your resume/CV as a memento of your{' '}
                     <span className="text-orange-600">character</span>, and add
                     on to your value.
                   </div>
                 </div>
                 <img
                   src={Showcase}
-                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 "
+                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 "
                 />
               </div>
             </div>
             <div className="relative text-justify my-4 px-4 flex justify-start items-center   p-2 hover:scale-[102%] ease-in transition-300">
               <div className="z-10 flex flex-col md:flex-row justify-start items-center dashboard rounded-md bg-gradient-to-r from-indigo-500 w-full">
-                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-blue-600 border-b-2 border-black">
+                <h1 className="lg:text-[18rem] text-[9rem] lg:leading-[24rem] leading-[12rem] text-center mx-8 text-transparent bg-clip-text bg-gradient-to-b from-pink-600 to-blue-600 border-b-2 border-black">
                   5
                 </h1>
                 <div className="w-60 text-start">
@@ -121,7 +121,7 @@ const HowItWorksDesktop = () => {
                 </div>
                 <img
                   src={Showcase}
-                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 md:opacity-60 "
+                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 "
                 />
               </div>
             </div>

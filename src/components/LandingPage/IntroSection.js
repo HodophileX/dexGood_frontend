@@ -8,9 +8,9 @@ const IntroSection = () => {
   };
   return (
     <div className="w-full relative">
-      <div className="flex flex-col pt-60 md:pt-72">
-        <div className=" mt-0 flex justify-center items-center">
-          <div className="absolute w-full top-0 h-[90vh] flex justify-center items-center z-10">
+      <div className="flex flex-col pt-40 md:pt-72">
+        <div className="relative mt-0 flex justify-center items-center">
+          <div className="absolute w-full top-0 h-[90vh] flex justify-center items-center z-2">
             <img
               src={HeaderImage}
               draggable={false}

@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import PropTypes from 'prop-types';
 import { ArrowIcon } from '../Common/svg/icon';
 const schema = yup.object().shape({
-  email: yup.string(),
+  email: yup.string().email().required('Please Enter your Email'),
 });
 
 const EmailForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
@@ -16,7 +16,7 @@ const EmailForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
     },
   });
 
-  const formikError = formik.values.email === undefined || formik.errors.email;
+  const formikError = formik.errors.email || formik.values.email === undefined;
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -32,7 +32,7 @@ const EmailForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
                     <input
                       type="email"
                       data-testid="login-screen-mobile-number"
-                      className="after:border-[1px] border-slate-300 focus:ring-0 outline-0 py-0.5 lg:pb-2 w-64 lg:w-96 text-left px-2 text-base lg:text-lg  placeholder-[#888]"
+                      className="border-[1px] border-slate-300 focus:ring-0 outline-0 py-0.5 lg:pb-2 w-64 lg:w-96 text-left px-2 text-base lg:text-lg  placeholder-[#888]"
                       placeholder="Email"
                       name="email"
                       autoComplete="off"
@@ -40,6 +40,7 @@ const EmailForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                     />
+
                     {isOtpSent === 0 && (
                       <button className="bg-white flex justify-center items-center px-2 py-2 rounded-r-sm border-none hover:bg-orange-400 cursor-pointer">
                         <div className="body-1 flex text-center">Verify</div>
@@ -51,7 +52,9 @@ const EmailForm = ({ onToggleOtpBox, onSendOtp, isOtpSent }) => {
                   </div>
                   <div className="w-full border-b-[1px] border-black"></div>
                   <div className="mt-3 h-[1px]">
-                    <p>{formikError}</p>
+                    <p className="text-red-500 h6-thin h6-sm-thin">
+                      {formikError}
+                    </p>
                   </div>
                 </div>
               </div>

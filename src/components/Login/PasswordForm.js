@@ -5,12 +5,16 @@ import { useNavigate } from 'react-router-dom';
 import { userRoute } from '../../route';
 import * as yup from 'yup';
 import { ArrowIcon } from '../Common/svg/icon';
+import { useDispatch } from 'react-redux';
+import { userGetAction } from '../../_redux/action/user';
 const schema = yup.object().shape({
   password: yup.string().required('Please Enter your password'),
 });
 const PasswordForm = ({ passwordGeneration, mobileInfo }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const userLoginRoute = () => {
+    dispatch(userGetAction());
     navigate(userRoute());
   };
   const formik = useFormik({

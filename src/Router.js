@@ -5,7 +5,7 @@ import Navbar from './components/NavBar/Navbar';
 import LandingPage from './Views/LandingPage/LandingPage';
 import VisionPage from './Views/LandingPage/VisionPage';
 import LoginContainer from './Views/Login/LoginContainer';
-import MainContainer from './Views/Main/MainContainer';
+import PostContainer from './Views/Post/PostContainer';
 import UserContainer from './Views/User/UserContainer';
 import { userGetAction } from './_redux/action/user';
 
@@ -23,7 +23,7 @@ const Router = () => {
           </div>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/main" element={<MainContainer />} />
+            <Route path="/post" element={<PostContainer />} />
             <Route path="/vision" element={<VisionPage />} />
             <Route path="/login" element={<LoginContainer />} />
             <Route path="/user" element={<UserContainer />} />

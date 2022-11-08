@@ -19,7 +19,7 @@ const PostCreateController = ({
   const postCallAction = () => {
     dispatch(getPostAction());
   };
-  console.log(postCreateType);
+
   return (
     <div>
       {(postCreateType == 'Testimoney' || postCreateType == 'Empty') && (
@@ -35,16 +35,18 @@ const PostCreateController = ({
           <PCImageModal
             isModalOpen={isModalOpen}
             setIsModalOpen={setIsModalOpen}
+            createPost={createPost}
+            postCallAction={postCallAction}
           />
         </div>
       )}
-      {postCreateType == 'documents' && (
+      {postCreateType == 'Documents' && (
         <PCTestimoneyModal
           isModalOpen={isModalOpen}
           setIsModalOpen={setIsModalOpen}
         />
       )}
-      {postCreateType == 'declaration' && (
+      {postCreateType == 'Declaration' && (
         <PCTestimoneyModal
           isModalOpen={isModalOpen}
           setIsModalOpen={setIsModalOpen}

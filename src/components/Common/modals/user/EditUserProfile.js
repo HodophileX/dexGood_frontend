@@ -1,10 +1,10 @@
 import React from 'react';
 import PropType from 'prop-types';
 import ReactModal from 'react-modal';
-import CrossIcon from '../../../../assets/svg/close.svg';
 import { SubmitButton } from '../../Buttons/SubmitButton';
 import { userUpdateAction } from '../../../../_redux/action/user';
 import { Formik } from 'formik';
+import { CloseIcon } from '../../../../assets/svg/close';
 
 const EditUserProfile = ({ isModalOpen, setIsModalOpen }) => {
   const updateProfile = () => {
@@ -28,7 +28,7 @@ const EditUserProfile = ({ isModalOpen, setIsModalOpen }) => {
             onClick={() => setIsModalOpen(!isModalOpen)}
           >
             close
-            <img className="w-5 ml-auto mt-1 " src={CrossIcon}></img>
+            <CloseIcon />
           </div>
         </div>
 

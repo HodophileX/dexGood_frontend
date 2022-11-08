@@ -2,23 +2,21 @@ import React from 'react';
 import PropType from 'prop-types';
 import ReactModal from 'react-modal';
 import { SubmitButton } from '../../Buttons/SubmitButton';
-import * as yup from 'yup';
-import { useFormik } from 'formik';
 import { CloseIcon } from '../../../../assets/svg/close';
+import { useFormik, yupToFormErrors } from 'formik';
+import * as yup from 'yup';
 
 const schema = yup.object().shape({
+  postId: yup.string().required(),
   context: yup.string().required(),
+  type: yup.string().required(),
 });
-const PostCreateModal = ({
-  isModalOpen,
-  setIsModalOpen,
-  createPost,
-  postCallAction,
-}) => {
+const UpdatePostModal = ({ isModalOpen, setIsModalOpen, post }) => {
   const formik = useFormik({
     initialValues: {
-      context: undefined,
-      type: 'TESTIMONEY',
+      postId: post?._id,
+      context: post?.context,
+      type: post?.type,
     },
     validationSchema: schema,
     onSubmit: val => {
@@ -32,7 +30,7 @@ const PostCreateModal = ({
       ariaHideApp={false}
       overlayClassName="f-modal-overlay"
       shouldCloseOnOverlayClick={true}
-      className="post-modal w-[90%] px-1 md:px-2 md:w-[35%] md:h-auto"
+      className="post-modal w-[90%] px-2 md:w-[35%] md:h-auto"
     >
       <form onSubmit={formik.handleSubmit}>
         <div className="flex text-black flex-col">
@@ -41,7 +39,7 @@ const PostCreateModal = ({
               Write your deed
             </div>
             <div
-              className="hover:text-slate-700 flex justify-center items-center px-1 md:px-3 py-1 hover:bg-blue-100 rounded-md cursor-pointer"
+              className="hover:text-slate-700 flex justify-center items-center px-3 py-1 hover:bg-blue-100 rounded-md cursor-pointer"
               onClick={() => setIsModalOpen(!isModalOpen)}
             >
               close
@@ -51,31 +49,30 @@ const PostCreateModal = ({
           <div className="w-full flex justify-start flex-col  items-start">
             <textarea
               className="flex items-start text-start px-2 py-1 w-full min-h-40 h-60 border-2 outline-none h6-thin resize-none"
-              placeholder="What you did?&#x270E; "
+              placeholder="What you do?&#x270E; "
               draggable={false}
-              name="context"
-              autoComplete="off"
-              value={formik.values.context || ''}
-              onChange={formik.handleChange}
               aria-setsize={false}
-              required
-            ></textarea>
-            <div className="flex my-2 border-[1px] border-black w-full rounded-sm">
-              <div className="h6-thin px-1 text-center body-2 flex justify-center items-center">
-                Verify
+            >
+              {post && post.context}
+            </textarea>
+            {post.verification.verification_status && (
+              <div className="flex my-2 border-[1px] border-black w-full rounded-sm">
+                <div className="h6-thin px-1 text-center body-2 flex justify-center items-center">
+                  Verify
+                </div>
+                <input
+                  type="email"
+                  className="w-full text-start px-2 border-l-[1px] my-2 border-black outline-none body-2"
+                  placeholder="verification email"
+                ></input>
+                <div className="p-2 flex justify-center items-center bg-slate-300 hover:bg-[#F26730] cursor-pointer px-4">
+                  Verify
+                </div>
               </div>
-              <input
-                type="email"
-                className="w-full text-start px-2 border-l-[1px] my-2 border-black outline-none body-2"
-                placeholder="verification email"
-              ></input>
-              <div className="p-2 flex justify-center items-center bg-slate-300 hover:bg-[#F26730] cursor-pointer px-4">
-                Verify
-              </div>
-            </div>
-            <button className="w-full" type="submit">
+            )}
+            <div className="w-full">
               <SubmitButton title="Post" />
-            </button>
+            </div>
           </div>
         </div>
       </form>
@@ -83,10 +80,9 @@ const PostCreateModal = ({
   );
 };
 
-export default PostCreateModal;
-PostCreateModal.propTypes = {
+export default UpdatePostModal;
+UpdatePostModal.propTypes = {
   isModalOpen: PropType.bool,
   setIsModalOpen: PropType.func,
-  createPost: PropType.func,
-  postCallAction: PropType.func,
+  post: PropType.object,
 };

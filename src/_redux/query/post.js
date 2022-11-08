@@ -6,9 +6,12 @@ export const CREATE_POST_GQL = gql`
       _id
       context
       user_id
+      thumbnail
       verification {
-        verifier_id
+        verifier_email
+        verification_status
       }
+      type
     }
   }
 `;
@@ -19,9 +22,12 @@ export const GET_POST_GQL = gql`
       _id
       context
       user_id
+      thumbnail
       verification {
-        verifier_id
+        verifier_email
+        verification_status
       }
+      type
     }
   }
 `;
