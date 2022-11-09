@@ -13,7 +13,6 @@ export const createPostAction = (value, cb) => {
     apolloClient
       .mutate({ mutation, variables: { input: value } })
       .then(({ data }) => {
-        console.log(data);
         if (data) {
           if (cb) {
             cb();
@@ -27,7 +26,7 @@ export const createPostAction = (value, cb) => {
       });
   };
 };
-/*eslint-disable*/
+
 export const getPostAction = () => {
   const query = GET_POST_GQL;
   return dispatch => {
@@ -37,7 +36,6 @@ export const getPostAction = () => {
       .then(({ data }) => {
         const { getAllPost: res } = data;
 
-        console.log(data);
         dispatch(reduxAction(POST_INFO, res));
         dispatch(reduxAction(GET_POST_PENDING, false));
       })

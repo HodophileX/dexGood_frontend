@@ -4,7 +4,7 @@ import DogFeeling from '../../../Image/landingPage/dogFeeding.png';
 import Globe from '../../../Image/landingPage/globe.png';
 import Showcase from '../../../Image/landingPage/showcase.png';
 import Invite2 from '../../../Image/landingPage/Invite2.png';
-
+import FundRaise from '../../../Image/landingPage/7563.jpg';
 const HowItWorksDesktop = () => {
   return (
     <section className="sm:mx-0 md:my-8 md:mx-80 sm:px-2 h-full ">
@@ -119,10 +119,12 @@ const HowItWorksDesktop = () => {
                     funds
                   </div>
                 </div>
-                <img
-                  src={Showcase}
-                  className="md:absolute -bottom-30 right-0 scale-75 -z-10 "
-                />
+                <div className="overflow-hidden absolute -z-10 right-10 -bottom-30 ">
+                  <img
+                    src={FundRaise}
+                    className="h-60 -z-10  object-cover rounded-md shadow-md"
+                  />
+                </div>
               </div>
             </div>
           </div>

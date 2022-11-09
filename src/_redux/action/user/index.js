@@ -123,7 +123,7 @@ export const userEmailLoginAction = (data, callback) => {
         dispatch(reduxAction(USER_OTP_PENDING, false));
 
         const { emailLogin: res } = data;
-        console.log(data);
+
         if (!res) return;
 
         dispatch(reduxAction(USER_INFO, res));
@@ -170,7 +170,6 @@ export const userEmailSendOtpAction = (data, callback) => {
             callback(res, 1);
           }
         } else {
-          console.log(res);
           if (res.password === null || res.password === undefined) {
             toastAction.success('Generate your password');
             if (callback) {

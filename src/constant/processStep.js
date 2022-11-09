@@ -26,7 +26,7 @@ export const PROCESS = [
     title: 'Showcase',
     process: `After going public
                     display your
-                    Dexrepo ID on your resume/CV as a memento of your
+                    plexus repository ID on your resume/CV as a memento of your
                     character, and add
                     on to your value.`,
   },
